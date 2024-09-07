@@ -1,0 +1,1 @@
+from .myremotepackage import myfoo
