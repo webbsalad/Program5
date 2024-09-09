@@ -2,7 +2,7 @@ import pytest
 import json
 from getweatherdata import get_weather_data
 
-key = '575a2f91669ced7f9ed448a82fd77dd7'  
+key = ''  
 
 def test_without_key():
     with pytest.raises(ValueError, match="API key is required"):
