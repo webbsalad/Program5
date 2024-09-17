@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+open-weather_API/__init__.py
+open-weather_API/getweatherdata.py
+open-weather_API/getweatherdata_test.py
+open-weather_API/owm_key.py
+open_weather_API.egg-info/PKG-INFO
+open_weather_API.egg-info/SOURCES.txt
+open_weather_API.egg-info/dependency_links.txt
+open_weather_API.egg-info/not-zip-safe
+open_weather_API.egg-info/top_level.txt
