@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+open-weather_LW/__init__.py
+open-weather_LW/getweatherdata.py
+open-weather_LW/getweatherdata_test.py
+open-weather_LW/owm_key.py
+open_weather_LW.egg-info/PKG-INFO
+open_weather_LW.egg-info/SOURCES.txt
+open_weather_LW.egg-info/dependency_links.txt
+open_weather_LW.egg-info/not-zip-safe
+open_weather_LW.egg-info/top_level.txt
