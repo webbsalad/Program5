@@ -1,7 +1,6 @@
 import functools
 
 def fib_elem_gen():
-    """Генератор, возвращающий элементы ряда Фибоначчи"""
     a = 0
     b = 1
 
@@ -11,7 +10,6 @@ def fib_elem_gen():
         a = b
         b = res
 
-# Пример с генератором
 g = fib_elem_gen()
 
 while True:
@@ -20,7 +18,6 @@ while True:
     if el > 10:
         break
 
-# Сопрограмма для вычисления чисел Фибоначчи
 def my_genn():
     """Сопрограмма"""
     while True:
@@ -32,12 +29,11 @@ def my_genn():
             a, b = b, a + b
         yield l
 
-# Декоратор для сопрограммы
 def fib_coroutine(g):
     @functools.wraps(g)
     def inner(*args, **kwargs):
         gen = g(*args, **kwargs)
-        gen.send(None)  # "Подготовка" сопрограммы
+        gen.send(None)  
         return gen
     return inner
 
@@ -46,4 +42,4 @@ my_genn = fib_coroutine(my_genn)
 gen = my_genn()
 
 # Отправляем число, и получаем результат
-print(gen.send(3))  # Вернет первые 5 чисел Фибоначчи
+print(gen.send(6))  # Вернет первые 5 чисел Фибоначчи
