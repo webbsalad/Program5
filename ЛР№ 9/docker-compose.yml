@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - DATABASE_URL=ссылка
+      - SECRET_KEY=your_secret_key
+    depends_on:
+      - postgres
+    
+  postgres:
+    image: postgres:latest
+    container_name: prog-lr9_pipa
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: bonus_program_db
+    ports:
+      - "5438:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
