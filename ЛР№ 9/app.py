@@ -3,6 +3,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
+
 # Инициализация приложения и базы данных
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@localhost:5432/postgres?sslmode=disable'  # Исправленный диалект
@@ -36,6 +37,8 @@ class Transaction(db.Model):
 
 # Регистрация Blueprint (предполагается, что router импортирован правильно)
 from router import router
+
+
 app.register_blueprint(router)
 
 if __name__ == '__main__':
